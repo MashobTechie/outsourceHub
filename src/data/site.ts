@@ -10,9 +10,9 @@
 
 export const site = {
   name: "outsource.hub",
-  tagline: "The talent was always here.",
+  tagline: "Your next hire, already vetted.",
   description:
-    "outsource.hub places vetted African professionals with companies in the US and Europe — engineers, designers, marketers and operators who work your hours and stay for the long run.",
+    "outsource.hub places vetted professionals with the companies that need them — engineers, designers, marketers and operators, screened, reference-checked and matched to the hours you actually work.",
 
   /** PLACEHOLDER — digits only, including country code. This is what wa.me expects. */
   whatsappNumber: "2340000000000",
@@ -134,8 +134,7 @@ export const roleGroups: {
   {
     key: "finance",
     title: "Finance & Admin",
-    blurb:
-      "Back-office depth without another head on your local payroll.",
+    blurb: "Back-office depth without adding another full-time head to payroll.",
     roles: ["Bookkeeping", "Accounts payable", "Payroll admin", "Reporting"],
   },
 ];
@@ -150,7 +149,7 @@ export const assurances = [
   {
     icon: "clock" as const,
     title: "Your working day, covered",
-    body: "African time zones sit between the US and Asia and overlap the European day almost entirely. Standups happen live, not overnight.",
+    body: "We shortlist against the hours the role needs covered, so the overlap is there from day one. Standups happen live, not overnight.",
   },
   {
     icon: "file" as const,
@@ -173,7 +172,7 @@ export const contrastRows = [
   },
   {
     label: "Cost per senior hire",
-    without: "Local market rate, plus agency fees on top",
+    without: "Full market rate, plus agency fees on top",
     with: "Senior-level depth at a rate that survives a budget review",
   },
   {
@@ -227,7 +226,7 @@ export const benefits = [
   },
   {
     title: "Senior depth, sensible rates",
-    body: "The arbitrage is geography, not experience. You are not trading seniority for cost — that is the whole point.",
+    body: "You are not trading experience for budget. We shortlist at the level you asked for, at a rate that survives a budget review.",
   },
   {
     title: "One relationship to manage",

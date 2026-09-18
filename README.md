@@ -1,9 +1,25 @@
 # outsource.hub
 
-Landing page for a freelance & outsourcing agency placing vetted African
-professionals with companies in the US and Europe.
+Landing page for a freelance & outsourcing agency placing vetted professionals —
+engineers, designers, marketers and operators — with the companies that need
+them.
 
 Marketing page only — no marketplace, dashboards, auth or payments.
+
+## Positioning: deliberately geography-free
+
+The page **never names a region, country or continent** for the talent. This is
+intentional, not an oversight. The pitch is vetting, speed, retention and
+matched working hours — none of which depend on where anyone sits.
+
+The one exception is `site.location` in `src/data/site.ts`, which is the
+agency's *own* address for the footer. That is a company detail, not a claim
+about where talent comes from.
+
+If you reintroduce geography later, the blast radius is `site.description`, the
+`assurances` timezone entry, the hero eyebrow and headline, and
+`HeroVisual.tsx` — which is currently built from working-day *patterns* rather
+than cities precisely so it survives this choice.
 
 ## Stack
 

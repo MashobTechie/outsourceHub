@@ -1,30 +1,42 @@
-import { Globe } from "@/components/icons";
+import { Clock } from "@/components/icons";
 import { cx } from "@/components/primitives";
 
 /**
- * The overlap chart. Deliberately built from real time zones rather than
- * invented statistics: each bar is a 09:00–17:00 local working day plotted on a
- * shared UTC axis, so the overlap it shows is arithmetic, not a marketing
- * claim.
+ * Coverage, expressed as hours rather than places.
+ *
+ * Deliberately geography-free: the page does not claim a region, so neither
+ * does the chart. Each bar is a working-day pattern plotted on a 24-hour local
+ * axis, so what it shows is a shape you can choose, not a statistic to defend.
  */
-const AXIS_START = 6;
-const AXIS_END = 23;
+const AXIS_START = 0;
+const AXIS_END = 24;
 const SPAN = AXIS_END - AXIS_START;
 
 const pct = (hour: number) => ((hour - AXIS_START) / SPAN) * 100;
 
-const rows = [
-  { city: "Lagos", zone: "UTC+1", startUtc: 8, endUtc: 17, accent: true },
-  { city: "London", zone: "UTC+0", startUtc: 9, endUtc: 17, accent: false },
-  { city: "New York", zone: "UTC−5", startUtc: 14, endUtc: 22, accent: false },
+const patterns = [
+  {
+    label: "Standard day",
+    detail: "09:00 – 17:00",
+    start: 9,
+    end: 17,
+    accent: true,
+  },
+  {
+    label: "Extended cover",
+    detail: "08:00 – 20:00",
+    start: 8,
+    end: 20,
+    accent: false,
+  },
+  {
+    label: "Around the clock",
+    detail: "Shifted handover",
+    start: 0,
+    end: 24,
+    accent: false,
+  },
 ];
-
-/** Where all three working days intersect, in UTC. */
-const SHARED = { start: 14, end: 17 };
-
-function label(hourUtc: number) {
-  return `${String(hourUtc).padStart(2, "0")}:00`;
-}
 
 export function HeroVisual() {
   return (
@@ -37,34 +49,34 @@ export function HeroVisual() {
 
       <div className="rounded-3xl border border-line bg-paper p-6 shadow-[0_1px_2px_rgba(28,25,23,0.04),0_28px_60px_-32px_rgba(28,25,23,0.28)] sm:p-8">
         <div className="flex items-center gap-2.5">
-          <Globe className="size-4 text-clay" />
+          <Clock className="size-4 text-clay" />
           <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-muted-2">
-            A working day, shared
+            Whatever hours you keep
           </p>
         </div>
 
         <p className="mt-4 font-display text-xl leading-snug text-ink">
-          Africa sits between your morning and Asia&rsquo;s night.
+          We hire to your window, not ours.
         </p>
 
-        <div className="mt-7 space-y-4">
-          {rows.map((row) => (
-            <div key={row.city}>
+        <div className="mt-7 space-y-5">
+          {patterns.map((pattern) => (
+            <div key={pattern.label}>
               <div className="flex items-baseline justify-between text-sm">
-                <span className="font-medium text-ink-2">{row.city}</span>
+                <span className="font-medium text-ink-2">{pattern.label}</span>
                 <span className="text-xs tabular-nums text-muted-2">
-                  {row.zone}
+                  {pattern.detail}
                 </span>
               </div>
-              <div className="relative mt-2 h-2.5 rounded-full bg-sand">
+              <div className="relative mt-2 h-2.5 overflow-hidden rounded-full bg-sand">
                 <div
                   className={cx(
                     "absolute inset-y-0 rounded-full",
-                    row.accent ? "bg-clay" : "bg-ink/25",
+                    pattern.accent ? "bg-clay" : "bg-ink/25",
                   )}
                   style={{
-                    left: `${pct(row.startUtc)}%`,
-                    width: `${pct(row.endUtc) - pct(row.startUtc)}%`,
+                    left: `${pct(pattern.start)}%`,
+                    width: `${pct(pattern.end) - pct(pattern.start)}%`,
                   }}
                 />
               </div>
@@ -72,27 +84,16 @@ export function HeroVisual() {
           ))}
         </div>
 
-        {/* The intersection, called out under the bars. */}
-        <div className="relative mt-5 h-8">
-          <div
-            className="absolute inset-y-0 rounded-lg border border-dashed border-clay/45 bg-clay-soft/70"
-            style={{
-              left: `${pct(SHARED.start)}%`,
-              width: `${pct(SHARED.end) - pct(SHARED.start)}%`,
-            }}
-          />
-        </div>
-
-        <div className="flex items-center justify-between text-[0.6875rem] tabular-nums text-muted-2">
-          <span>{label(AXIS_START)}</span>
-          <span>UTC</span>
-          <span>{label(AXIS_END)}</span>
+        <div className="mt-4 flex items-center justify-between text-[0.6875rem] tabular-nums text-muted-2">
+          <span>00:00</span>
+          <span>Your local time</span>
+          <span>24:00</span>
         </div>
 
         <p className="mt-5 border-t border-line-2 pt-5 text-sm leading-relaxed text-muted">
-          Lagos overlaps the London working day almost end to end, and still
-          catches the New York morning &mdash; the dashed band is where all three
-          are online at once.
+          Tell us the hours the role needs covered and we shortlist against them.
+          Overlap is a hiring requirement here, not something you hope for after
+          someone starts.
         </p>
       </div>
 

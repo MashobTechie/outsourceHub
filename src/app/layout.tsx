@@ -31,10 +31,11 @@ export const metadata: Metadata = {
   applicationName: site.name,
   keywords: [
     "outsourcing",
-    "African talent",
+    "vetted talent",
     "remote hiring",
-    "offshore engineering team",
-    "hire developers Africa",
+    "staff augmentation",
+    "hire developers",
+    "outsourced teams",
   ],
   openGraph: {
     type: "website",

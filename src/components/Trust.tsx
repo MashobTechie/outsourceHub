@@ -13,7 +13,7 @@ export function Trust() {
   const note = replacementNote();
 
   return (
-    <Section className="border-y border-line bg-bone-2 !py-16 md:!py-20">
+    <Section className="border-y border-line bg-bone-2 py-16! md:py-20!">
       <div className="shell">
         <ul className="grid gap-x-10 gap-y-9 sm:grid-cols-2 lg:grid-cols-4">
           {assurances.map((item, i) => {

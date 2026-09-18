@@ -4,7 +4,7 @@ import { whatsappLink } from "@/data/site";
 
 export function FinalCta() {
   return (
-    <Section className="bg-ink !py-20 md:!py-28">
+    <Section className="bg-ink py-20! md:py-28!">
       <div className="shell relative overflow-hidden">
         <div
           aria-hidden="true"

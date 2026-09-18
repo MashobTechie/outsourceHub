@@ -16,34 +16,34 @@ function shortlistLine() {
 
 export function Hero() {
   return (
-    <Section id="top" className="relative overflow-hidden !pt-14 md:!pt-20">
+    <Section id="top" className="relative overflow-hidden pt-14! md:pt-20!">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[38rem] bg-[radial-gradient(70%_50%_at_50%_0%,rgba(239,233,221,0.9),transparent_75%)]"
+        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-152 bg-[radial-gradient(70%_50%_at_50%_0%,rgba(239,233,221,0.9),transparent_75%)]"
       />
 
       <div className="shell grid items-center gap-14 lg:grid-cols-[1.05fr_1fr] lg:gap-20">
         <div>
           <div className="reveal">
-            <Eyebrow>Vetted African talent, placed worldwide</Eyebrow>
+            <Eyebrow>Vetted talent, matched to your hours</Eyebrow>
           </div>
 
           <h1
             className="reveal mt-5 text-[2.75rem] leading-[1.05] sm:text-6xl lg:text-[4.25rem]"
             style={revealDelay(70)}
           >
-            The talent was
+            The shortlist you
             <br />
-            always here.
+            actually wanted.
           </h1>
 
           <p
             className="reveal mt-7 max-w-xl text-lg leading-relaxed text-muted sm:text-xl"
             style={revealDelay(140)}
           >
-            Engineers, designers, marketers and operators across Africa &mdash;
-            screened, reference-checked and working your hours. You run the work.
-            We handle everything around it.
+            Engineers, designers, marketers and operators &mdash; screened,
+            reference-checked and matched to the hours you work. You run the
+            work. We handle everything around it.
           </p>
 
           <div
