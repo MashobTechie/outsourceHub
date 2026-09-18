@@ -41,7 +41,7 @@ export function Hero() {
             className="reveal mt-7 max-w-xl text-lg leading-relaxed text-muted sm:text-xl"
             style={revealDelay(140)}
           >
-            Engineers, designers, marketers and operators &mdash; screened,
+            Engineers, designers, marketers and operators. Screened,
             reference-checked and matched to the hours you work. You run the
             work. We handle everything around it.
           </p>

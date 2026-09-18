@@ -12,7 +12,7 @@ export const site = {
   name: "outsource.hub",
   tagline: "Your next hire, already vetted.",
   description:
-    "outsource.hub places vetted professionals with the companies that need them — engineers, designers, marketers and operators, screened, reference-checked and matched to the hours you actually work.",
+    "outsource.hub places vetted professionals with the companies that need them: engineers, designers, marketers and operators, screened, reference-checked and matched to the hours you actually work.",
 
   /** PLACEHOLDER — digits only, including country code. This is what wa.me expects. */
   whatsappNumber: "2340000000000",
@@ -116,7 +116,7 @@ export const roleGroups: {
     key: "support",
     title: "Operations & Support",
     blurb:
-      "The people who keep the day running — queues cleared, customers answered, process documented.",
+      "The people who keep the day running: queues cleared, customers answered, process documented.",
     roles: [
       "Customer support",
       "Executive assistance",
@@ -201,7 +201,7 @@ export const steps = [
   {
     number: "02",
     title: "We shortlist",
-    body: "We source, assess and reference-check, then send you a small set of candidates with honest notes on each — including where they are weaker.",
+    body: "We source, assess and reference-check, then send you a small set of candidates with honest notes on each, including where they are weaker.",
   },
   {
     number: "03",

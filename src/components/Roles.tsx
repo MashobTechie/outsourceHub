@@ -10,7 +10,7 @@ export function Roles() {
         <SectionHeading
           eyebrow="Who we place"
           title="The roles you have been trying to fill."
-          lede="Individual hires or a whole function. If the role is not listed, ask — the network is wider than the page."
+          lede="Individual hires or a whole function. If the role is not listed, ask. The network is wider than the page."
         />
 
         <ul className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">

@@ -36,8 +36,8 @@ export function Navbar() {
           : "border-b border-transparent",
       )}
     >
-      <nav aria-label="Main" className="shell flex h-[4.5rem] items-center justify-between gap-6">
-        <a href="#top" className="rounded-md" aria-label="outsource.hub — home">
+      <nav aria-label="Main" className="shell flex h-18 items-center justify-between gap-6">
+        <a href="#top" className="rounded-md" aria-label="outsource.hub home">
           <Logo />
         </a>
 

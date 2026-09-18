@@ -56,12 +56,12 @@ export function Trust() {
           ) : (
             <p className="text-center text-sm text-muted">
               References and examples of placements we have made are available on
-              request &mdash;{" "}
+              request.{" "}
               <a
                 href="#contact"
                 className="font-medium text-clay underline decoration-clay/30 underline-offset-4 transition-colors hover:decoration-clay"
               >
-                just ask when you send your brief
+                Just ask when you send your brief
               </a>
               .
             </p>

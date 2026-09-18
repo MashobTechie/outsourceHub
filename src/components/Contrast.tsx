@@ -10,7 +10,7 @@ export function Contrast() {
         <SectionHeading
           eyebrow="The difference"
           title="Same role. Two very different quarters."
-          lede="Nothing here is a knock on hiring locally — it is just what the two processes cost you in time, money and attention."
+          lede="Nothing here is a knock on hiring locally. It is just what the two processes cost you in time, money and attention."
         />
 
         <div className="mt-14 overflow-hidden rounded-3xl border border-line bg-paper">
